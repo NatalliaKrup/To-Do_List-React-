@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+body{
+	hyphens: auto;
+	font-family: 'Roboto Flex', sans-serif;
+	background-color: #4b82a7;
+	padding: 0 20px;
+	line-height: 19px;
+}
+.block_toDo{
+	padding: 20px 0;
+}
+.container_toDo{
+	padding: 20px 0 0 0;
+	max-width: 500px;
+	margin: 0 auto;
+	background-color: #a3d8fe;
+}
+.container_toDo h1{
+	text-transform: uppercase;
+}
+.container_toDo h1, h2{
+	text-align: center;
+	padding: 10px;
+	text-shadow: 2px 2px 3px #4b82a7;
+}
+.container_toDo h2{
+	margin-bottom: 20px;
+	line-height: 25px;
+}
+.container_toDo img{
+	display: inline;
+	max-width: 100%;
+}
+.toDo_flex{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.toDo_flex>*:not(:last-child){
+	margin-bottom: 10px;
+}
+.toDo_input{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.toDo_input input{
+	width: 70%;
+	outline: none;
+	border: 1px solid #969697;
+	padding: 3px 5px;
+	background-color: #e0e0e1;
+}
+.toDo_input input::placeholder{
+	font-size: 10px;
+	padding: 0 5px;
+}
+.toDo_btn {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.toDo_btn button{
+	font-size: 18px;
+	font-weight: 500;
+	font-family: 'Roboto Flex', sans-serif;
+	cursor: pointer;
+	width: 100%;
+	max-width: 62%;
+}
+.toDo_btn button:active{
+	box-shadow: 2px 2px 2px 2px #4b82a7;
+}
+.add button{
+	padding: 3px 5px;
+	background-color: #309201;
+	border: transparent;
+}
+.delete button{
+	padding: 3px 5px;
+	background-color: #fe0000;
+	border: transparent;
+}
+.toDo_list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.toDo_list li{
+	width: 100%;
+	max-width: 60%;
+	padding: 3px 5px;
+	background-color: #e0e0e1;
+	border: 1px solid #969697;
+	margin-bottom: 2px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.crossedLi{
+	text-decoration: 2px #fe0000 line-through;
 }
